@@ -14,6 +14,9 @@ var balance = JSON.stringify(store.get("accounts")[i].balance)
 $('#wallets').append('<tr><td> <a class="wallet" id="'+address+'">'+address+'</a> </td><td> '+balance+' <small> ETH</small></td></tr>')
 }
  $('body').focus() // focus input box
+  $('#addnew').click(function(){
+	  window.location.href = "./newaccount.html"
+  })
  $('.wallet').click(function(){
 	 var address = $(this).attr('id')
 	 window.location.href = "./wallet.html"

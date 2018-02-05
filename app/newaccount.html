@@ -13,7 +13,7 @@
     <meta name="author" content="Jean-Philippe Beaudet">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./dashboard.css">
-    <title>KYCWallet</title>
+    <title>New KYCWallet Account</title>
 
   <!-- Scripts -->
   <script>
@@ -21,7 +21,7 @@
   </script>
   <script src="./jquery-3.3.1.min.js"></script>
   <script src="./dashboard.js" charset="utf-8"></script>
-  <script src="../controllers/wallet.js" charset="utf-8"></script>
+  <script src="../controllers/dashboard.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -35,12 +35,6 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="#">My KYC Informations</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../app/addowner.html">Add/change Owners</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="../app/index.html"> Log Out</a>
           </li>
         </ul>
@@ -51,36 +45,42 @@
   <div id="container" class="container-fluid" style="padding:2em;">
 	     <!-- Input row -->
     <div class="row">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " id="add">
-		  <h2 id="balance">Address: <small> #hgsjkgksjbsjbslgsk</small></h2>
-		  <hr>
-		    </div>
-        </div>
-
-            <div class="row" style="padding:2em;">
-        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 " id="adress">  
-			<input class="form-control mr-sm-2" type="text" placeholder="Enter New Owner Address" id="newowner" style="width: 100%;height:50px;">
-
-			</div> 
-			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 " id="scandev">  
-			<img src="../public/image/qricon.png" alt="Smiley face" height="50" width="50" name="qricon" id="qricon" >
-				</div> 			
+		<h1> Enter Account Details </h1>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " >  
+			<form class="form-inline mt-2 mt-md-0" name="newaccountform" id="newaccountform" >
+			<input class="form-control mr-sm-2" type="text" placeholder="Enter New Password 1" id="info1" style="width: 100%;height:50px;">
+			<br>
+			<input class="form-control mr-sm-2" type="text" placeholder="Confirm New Password 1" id="info1" style="width: 100%;height:50px;">
+			<br>
+			<input class="form-control mr-sm-2" type="text" placeholder="Enter Key Info 1" id="info1" style="width: 100%;height:50px;">
+			<br>
+			<input class="form-control mr-sm-2" type="text" placeholder="Enter Key Info 2" id="info2" style="width: 100%;height:50px;">
+			<br>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+    <small id="fileHelp" class="form-text text-muted">Your informations will be sent to our third-party partners as an oracle. Thiswill guarantee this adress Know Your Client requirements. </small>
+  </div>
+  <br>
+          <button class="btn btn-outline-primary btn-block" id="unlock" type="submit" style="width: 100%;height:50px;margin:2em;">Submit My Informations</button>
+			<small><i>Disclaimer: by submitting your informations, you accept the <a href="#"> terms & condition </a>and rules that apply</i></small>
+			</div> 	
+			</form>	
 				</div> 	  
     <!-- Input row -->
     <div class="row">
-        <h2>My 5 last Transactions</h2>
+        <h2>Current Accounts</h2>
         <div class="table-responsive">
-          <table class="table table-striped table-dark">
+          <table class="table table-hover table-dark">
             <thead>
               <tr>
-				 <th>Date </th>
-                <th>TransactionID </th>
+                <th>Wallet Adress </th>
                 <th>Balance</th>
 
               </tr>
             </thead>
-            <tbody id="txs">
-        
+            <tbody id="wallets">
+       
             </tbody>
           </table>
         </div>
@@ -89,7 +89,11 @@
   </div>
       </div>
   </div>
+      
+      
+  </div>
   
 </body>
 
 </html>
+
