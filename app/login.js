@@ -8,10 +8,13 @@ $("#passphrase").submit(function(event) {
 	if(mydata== "" || null ){
 		$("#pass_container").show()
 		$("#unlock").addClass("btn btn-outline-danger my-2 my-sm-0 btn-block")
+		$("#unlock").css("width: 100%;height:50px;margin:2em;")
+		$("#pass").attr("placeholder","Wrong passphrase... Please Try again")
 	}else{
 	$("#loading").attr("hidden", false) 
 	console.log("click")
 	$("#unlock").addClass("btn btn-outline-success my-2 my-sm-0 btn-block")
+	
     const val = mydata
     const sha512 = crypto.createHash('sha512').update(val, 'utf8').digest('hex')   
    
