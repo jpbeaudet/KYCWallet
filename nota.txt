@@ -1,0 +1,33 @@
+login 
+home
+	add account
+		>> create new ethreum adress
+		>> set password for adress
+		>> store password in OS using eth adress as key
+		>> store new ethereum adress
+		
+	new wallet
+	x for remove wallet
+	list of accounts(eth adress)(click to go )
+new wallet
+	create new eth adress
+		add passphrase
+		>> push password with eth adress as account
+		>> push eth adress to db
+	new wallet form
+	    set initial owners(eth adress)
+	    set minimum owner limit
+		kyc form
+		>> store encrypted json format key/values
+		>> set encryption passphrase as a constant variant from password & eth adress hash
+		wait for confirmation
+wallet
+	add owner
+	remove owner
+	Show KYC informations
+	Send
+		center( form single, to adress (top rigth: mini scan button(onclick: open scan QR)
+	Receive
+		(center: eth adress, top rigth: QR mini (onclick: show QR big))
+	(top rigth : balance)
+	{list : last 10 transactions from wallet }

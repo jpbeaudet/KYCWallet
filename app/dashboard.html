@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+
+
+
+  <!-- Stylesheets -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Jean-Philippe Beaudet">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>KYCWallet Accounts</title>
+
+  <!-- Scripts -->
+  <script>
+    delete module.exports
+  </script>
+  <script src="./jquery-3.3.1.min.js"></script>
+  <script src="./dashboard.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">My KYCWallet Accounts</a>
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../app/index.html">Log Out</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <div id="container" class="container-fluid" style="padding:2em;">
+	     <!-- Input row -->
+    <div class="row">
+          <div id="container" class="container-fluid" style="padding:2em;">
+			<button class="btn btn-outline-primary btn-block" id="unlock" type="submit"><h2>+ Add New</h2></button> 
+        </div> 
+          </div>
+    <!-- Input row -->
+    <div class="row">
+        <h2>My Accounts</h2>
+        <div class="table-responsive">
+          <table class="table table-hover table-dark">
+            <thead>
+              <tr>
+                <th>Wallet Adress </th>
+                <th>Balance</th>
+
+              </tr>
+            </thead>
+            <tbody id="wallets">
+       
+            </tbody>
+          </table>
+        </div>
+      </main>
+    </div>
+  </div>
+      </div>
+  </div>
+  
+</body>
+
+</html>
